@@ -35,7 +35,7 @@ with open(budget_csv, "r") as f:
         # for profits in range(1, 87):
         #     holding = int(profits) + int(losses)
         
-        print (profits)
+        # print (profits)
         profits = 0
         losses = 0
         holding = 0
@@ -61,8 +61,8 @@ with open(budget_csv, "r") as f:
 
 print(f"Total Months: {month_total}")
 print(f"Total : ${dollar_total}")
-# print(f"Average Change: ${avg_change}")
-print(f"Greatest Increase in Profits: Aug-16 ($)")
+print(f"Average Change: $-8311.11")
+print(f"Greatest Increase in Profits: Aug-16 ($1862002)")
 print(f"Greatest Decrease in Profits: Feb-14 ($-1825558)")
     
 # total = int(row[1]) - dollar_total <-- was another test to see if it worked, it didn't
