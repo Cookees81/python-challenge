@@ -14,6 +14,7 @@ budget_csv = os.path.join(r"C:\Users\salaz\OneDrive\Desktop\Class_Folder\homewor
 month_total = 0
 dollar_total = 0
 profits = 0
+losses = 0
 # create place to keep difference between each integer in row1
 holding = []
 
@@ -30,11 +31,14 @@ with open(budget_csv, "r") as f:
         dollar_total = dollar_total + int(row[1])
         # calculate difference between 1st dollar amount minus 2nd through rows
         profits = profits + int(row[1])
-
-        # holding = difference - (int(difference))
+        losses = losses - int(row[1])
+        # for profits in range(1, 87):
+        #     holding = int(profits) + int(losses)
         
         print (profits)
         profits = 0
+        losses = 0
+        holding = 0
 
        # print(holding) <--to test result ended in --> [-1088983, 1443517, 457827, 1739204, -570055, 572210, 2234860, 532095, 
         # 1970537, 672308, 3359540, 2982173, 1183483, 888252, -1323154, -1273913, -679611, 1019300, 3013910, 556976, 2011219, 
