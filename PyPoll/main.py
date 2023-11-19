@@ -39,17 +39,17 @@ with open(election_data, "r") as f:
             stockham_votes = stockham_votes + 1
         elif (row[2]) == 'Diana DeGette':
             degette_votes = degette_votes + 1
-        else:(row[2]) == 'Raymon Anthony Doane'
-        doane_votes = doane_votes + 1
+        elif (row[2]) == 'Raymon Anthony Doane':
+            doane_votes = doane_votes + 1
 
 #calculate percentages and convert to str
-stockham_pct = int(stockham_votes)/int(vote_total)
+stockham_pct = round(int(stockham_votes)/int(vote_total) * 100, 3)
 stockham.append(str(stockham_pct) + "%")
 
-degette_pct = int(degette_votes)/int(vote_total)
+degette_pct = round(int(degette_votes)/int(vote_total) *100, 3)
 degette.append(str(degette_pct) + "%")
 
-doane_pct = int(doane_votes)/int(vote_total)
+doane_pct = round(int(doane_votes)/int(vote_total) * 100, 3)
 doane.append(str(doane_pct) + "%")
 
 #convert lists to str
@@ -62,15 +62,15 @@ print("Election Results")
 
 print("---------------------------------------")
 
-print(f"Total Votes: ")
+print(f"Total Votes: " + str(vote_total))
 
 print("---------------------------------------")
 # 23.049% (85213)
-print(f"Charles Casper Stockham: " + stockham + "(" + stvotes + ")")
+print(f"Charles Casper Stockham: " + str(stockham) + "(" + str(stvotes) + ")")
 # 73.812% (272892)
-print(f"Diana DeGette: " + degette + "(" + dgvotes + ")")
+print(f"Diana DeGette: " + str(degette) + "(" + str(dgvotes) + ")")
 # 3.139% (11606)
-print(f"Raymon Anthony Doane: " + doane + "(" + dovotes + ")")
+print(f"Raymon Anthony Doane: " + str(doane) + "(" + str(dovotes) + ")")
 
 print("---------------------------------------")
 
